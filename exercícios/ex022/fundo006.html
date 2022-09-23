@@ -6,14 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Background-size</title>
     <style>
-/*valores para background size(além dos valores em px já tratados):contain:mostra a imagem inteira, a qualquer custo!;cover:muito vom e bonito pra usar no desenvolvimento de sites, faz com que a imagem apareça por toda a tela, mas não necessariamente a imagem inteira, a imagem é cortada de acordo com o tamanho que a tela estiver, mas lembrando que a imagem tem o tamanho normal dela, portanto se tiver bastante conteúdo, uma hora a imagem vai acabar e vai sobrar conteúdo*/
+/*valores para background size(além dos valores em px já tratados):contain:mostra a imagem inteira, a qualquer custo!;cover:muito vom e bonito pra usar no desenvolvimento de sites, faz com que a imagem apareça por toda a tela, mas não necessariamente a imagem inteira, a imagem é cortada de acordo com o tamanho que a tela estiver, mas lembrando que a imagem tem o tamanho normal dela, portanto se tiver bastante conteúdo, uma hora a imagem vai acabar e vai sobrar conteúdo
+
+shorthand background:
+background:color image position repeat size attachment
+*/
         body{
             height: 100vh;
-            background-color: black;
-            background-image: url(imagens/wallpaper002.jpg);
-            background-position: center center;
-            background-repeat: no-repeat;
-            background-size: cover;
+            background:black url('imagens/wallpaper002.jpg') center center no-repeat cover fixed;
         }
         main{
             background-color: white;
