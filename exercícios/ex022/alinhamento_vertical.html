@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alinhamento vertical</title>
+    <style>
+        #container{
+            position: relative;
+            height:500px;
+            padding:10px;
+            background-color: purple;
+        }
+        #conteudo{
+            position:absolute;
+            height:200px;
+            width: 400px;
+            background-color: yellow;
+            left:50%;
+            top:50%;
+            transform: translate(-200px,  -100px);
+        }
+    </style>
+</head>
+<!--
+Pra alinhar verticalmente precisa ter um container e um elemento dentro desse container
+
+margin auto faz somente o alinhamento horizontal, mas não o vertical
+
+pra fazer o container filho ficar alinhado verticalmente dentro do pai: pra começar o pai precisa ter posicionamento relativo(que inclusive é o padrão). Já o filho precisa ter seu posicionamento absoluto, porque no absoluto dá pra definir o left e top. define o left e o top pra 50%. e aí pra acertar a caixa mais pra cima usa o transform:translate()
+-->
+<body>
+    <section id="container">
+        <article id="conteudo">
+
+        </article>
+    </section>
+</body>
+</html>
