@@ -9,11 +9,14 @@
 /*valores para background size(além dos valores em px já tratados):contain:mostra a imagem inteira, a qualquer custo!;cover:muito vom e bonito pra usar no desenvolvimento de sites, faz com que a imagem apareça por toda a tela, mas não necessariamente a imagem inteira, a imagem é cortada de acordo com o tamanho que a tela estiver, mas lembrando que a imagem tem o tamanho normal dela, portanto se tiver bastante conteúdo, uma hora a imagem vai acabar e vai sobrar conteúdo
 
 shorthand background:
-background:color image position repeat size attachment
+background:color image position repeat attachment
+
+teoricamente entre o repeat e o attachment teoricamente(segundo foi determinado pela documentação) teria um size, porém não funciona
 */
         body{
             height: 100vh;
-            background:black url('imagens/wallpaper002.jpg') center center no-repeat cover fixed;
+            background:black url('imagens/wallpaper002.jpg') center center no-repeat fixed;
+            background-size: cover;
         }
         main{
             background-color: white;
