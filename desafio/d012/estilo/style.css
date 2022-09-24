@@ -1,18 +1,29 @@
 /*
 font-variant:small-caps deixa as primeiras letras bem maiores que as outras.
 já text-transform:uppercase deixa tudo maiúsculo
+Para mudar o tamanho da letra de acordo com o tamanho da janela basta definir no font size não em 'em', mas em vw, aí muda o tamanho da fonte de acordo com o tamanho da largura da janela. Mas esse não é a melhor maneira de tornar os textos responsivos
 
 */
 @charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Passion+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sriracha&display=swap');
+
+:root{
+    --fonte1: Verdana, Geneva, Tahoma, sans-serif;
+    --fonte2: 'Passion One', cursive;
+    --fonte3: 'Sriracha', cursive;
+}
 
 *{
     margin: 0px;
     padding: 0px;
+    font-size: 1em;
 }
 
 html, body{
     min-height: 100vh;
     background-color: darkgray;
+    font-family: var(--fonte1);
 }
 header{
     background-color: black;
@@ -22,6 +33,8 @@ header{
 header > h1{
     padding-top: 50px;
     font-variant: small-caps;
+    font-family: var(--fonte2);
+    font-size: 4em;
 }
 header > p{
     padding-bottom: 50px;
@@ -39,6 +52,8 @@ section{
     padding-bottom:10vh;
     line-height:2em;
     padding-left: 30px;
+    font-family: var(--fonte3);
+    font-size: 2em;
 }
 section.normal{
     background-color: white;
