@@ -5,8 +5,94 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tabelas</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        table{
+            width:500px;
+            border-collapse: collapse;
+        }
+        td,th{
+            border:1px solid black;
+            padding: 10px;
+        }
+        thead{
+            background-color: gray;
+            color:white;
+        }
+        .num{
+            text-align:right;
+        }
+        caption{
+            font-size: 1.5em;
+            font-weight: bold;
+            padding: 10px;
+            background-color: lightgray;
+        }
+
+    </style>
 </head>
 <body>
     <h1>Uso de tabelas grandes</h1>
+<!--
+Aquela hierarquia de table, tr e td é pra tabelas pequenas. Tabelas grandes são construídas de outras maneiras, mais semanticas
+
+Anatomias para tabelas grandes: primeiro tem o pai table, depois os filhos thead,tbody,tfoot, assim teremos uma área para cabeçalho da tabela, uma área para o corpo da tabela e uma área para rodapé da tabela. Na verdade não é necessário cabeça e rodapé, mas é bom ter pra organizar
+
+dentro da cabeça:podemos ter o th, tr e td.
+dentro do corpo:podemos ter o th, tr e td.
+dentro do rodapé:podemos ter o th, tr e td.
+
+lembrando que th é usado para títuos, sejam esses títulos no thead, no tbody, ou no tfoot
+A semântica vale tanto que se coloca o tfoot abaixo do thead, ainda assim o tfoot vai aparecer lá embaixo, pois é lá embaixo que é o lugar do rodapé
+
+é uma coisa muito importante deixar os números de uma tabela alinhados a direita, pois é um padrão
+
+Sempre é bom usar essas tags semanticas thead tbody e tfoot pois é uma recomendação do W3C
+
+uma tabela tem também uma legenda, que se chama caption, é uma legenda, mas é também um título
+o caption vem antes do thead
+lembrando que por ser uma tag semântica, não importa onde vai ser inserido na tabela, ele vai aparecer logo acima da tabela
+
+é bom ficar muito esperto com quando usar cada tag, lembrar que pra decidir qual tag usar deve-se levar em consideração o significado que o conteúdo da tag vai ter. th é usado para título, é algo que faz referencia a outros conteúdos. Por exemplo: uma tag escrito Estados faz referência às tags com conteúdo que virão abaixo delas que terao como conteúdo os nomes dos estados.
+
+fazendo o escopo da tabela:
+no escopo relacionamos tags. A tag de título é relacionadas a todas as que vem abaixo, ou então ao lado, e fazer o escopo consiste em relacionar o título com seus relacionados. Por exemplo: vou colocar como um parâmetro no th de estados um scope="col". Isso diz que os dados relacionados ao titulo Estados estão na mesma coluna que ele.
+
+Esses parâmetros de escopo não alteram nada na parte visual do site, porém são importantes para a análise quando o site é buscado pelo google. Isso altera na parte por trás do que é visto no site, altera em uma análise na estrutura da tabela, em como um mecanismo de busca analisa o site, torna mais fácil a análise
+
+pra mudar a largura de toda uma coluna, basta ir no título e alterar o width pelo estilo, isso vai alterar o width de toda essa coluna
+-->
+    <table>
+        <caption>População das unidades federativas
+        </caption>
+        <thead>
+            <tr>
+                <th scope="col">Estado</th>
+                <th scope="col" style="width:50px;">População</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>São Paulo</td>
+                <td class="num">45.919.049</td>
+            </tr>
+            <tr>
+                <td>Minas Gerais</td>
+                <td class="num">21.168.791</td>
+            </tr>
+            <tr>
+                <td>Rio de Janeiro</td>
+                <td class="num">17.168.791</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <th scope="row">Total de habitantes</th>
+                <td class="num">0000</td>
+            </tr>
+        </tfoot>
+    </table>
 </body>
 </html>
