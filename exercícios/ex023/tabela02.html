@@ -12,6 +12,7 @@
         table{
             width:500px;
             border-collapse: collapse;
+            position: relative;
         }
         td,th{
             border:1px solid black;
@@ -20,6 +21,11 @@
         thead{
             background-color: gray;
             color:white;
+        }
+        thead > tr > th{
+            position:sticky;
+            top:-1px;
+            background-color: gray;
         }
         tbody > tr:nth-child(2n){
             background-color: lightgray;
@@ -82,6 +88,12 @@ no lugar de 2n poderia ser odd(que significa impar em ingles), ou então even(qu
 a situação ideal pra usar efeito zebrado é quando temos muitas colunas, aí fica difícil ver de qual linha veio aquele dado
 
 cabeçalho fixo em tabela grande: não funciona em todos os navegadores, mas funciona no chrome
+Funciona quando a tabela é grande, tem muitos dados.
+Primeiramente a tabela tem que ter um posicionamento relatico; Define o posicionamento do th que está dentro do tr que está dentro do thead como sticky, um top como -1px, e um background-color igual ao do que está no cabeçalho. e pronto. Lembrando, se acabar a tabela o título fica pra trás, como deve ser!.
+
+W3C recomenda: th sempre tem que ter escopo
+
+Tem escopo de grupo também, quando não o th não se trata apenas de um tr ou td, as vezes em um th que é mesclado
 -->
     <table>
         <caption>População das unidades federativas
@@ -105,6 +117,78 @@ cabeçalho fixo em tabela grande: não funciona em todos os navegadores, mas fun
                 <td>Rio de Janeiro</td>
                 <td class="num">17.168.791</td>
             </tr>
+            <tr>
+                <td>Minas Gerais</td>
+                <td class="num">21.168.791</td>
+            </tr>
+            <tr>
+                <td>Rio de Janeiro</td>
+                <td class="num">17.168.791</td>
+            </tr>
+            <tr>
+                <td>Minas Gerais</td>
+                <td class="num">21.168.791</td>
+            </tr>
+            <tr>
+                <td>Rio de Janeiro</td>
+                <td class="num">17.168.791</td>
+            </tr>
+            <tr>
+                <td>Minas Gerais</td>
+                <td class="num">21.168.791</td>
+            </tr>
+            <tr>
+                <td>Rio de Janeiro</td>
+                <td class="num">17.168.791</td>
+            </tr>
+            <tr>
+                <td>Minas Gerais</td>
+                <td class="num">21.168.791</td>
+            </tr>
+            <tr>
+                <td>Rio de Janeiro</td>
+                <td class="num">17.168.791</td>
+            </tr>
+            <tr>
+                <td>Minas Gerais</td>
+                <td class="num">21.168.791</td>
+            </tr>
+            <tr>
+                <td>Rio de Janeiro</td>
+                <td class="num">17.168.791</td>
+            </tr>
+            <tr>
+                <td>Minas Gerais</td>
+                <td class="num">21.168.791</td>
+            </tr>
+            <tr>
+                <td>Rio de Janeiro</td>
+                <td class="num">17.168.791</td>
+            </tr>
+            <tr>
+                <td>Minas Gerais</td>
+                <td class="num">21.168.791</td>
+            </tr>
+            <tr>
+                <td>Rio de Janeiro</td>
+                <td class="num">17.168.791</td>
+            </tr>
+            <tr>
+                <td>Minas Gerais</td>
+                <td class="num">21.168.791</td>
+            </tr>
+            <tr>
+                <td>Rio de Janeiro</td>
+                <td class="num">17.168.791</td>
+            </tr>
+            <tr>
+                <td>Minas Gerais</td>
+                <td class="num">21.168.791</td>
+            </tr>
+            <tr>
+                <td>Rio de Janeiro</td>
+                <td class="num">17.168.791</td>
+            </tr>
         </tbody>
         <tfoot>
             <tr>
@@ -113,5 +197,9 @@ cabeçalho fixo em tabela grande: não funciona em todos os navegadores, mas fun
             </tr>
         </tfoot>
     </table>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat fugiat cumque eum quae officia ut distinctio veniam asperiores. Dicta itaque incidunt perspiciatis harum exercitationem iure tempore at deserunt, ipsa rerum. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur sequi tenetur accusantium nihil est, nostrum pariatur sunt? Aut placeat, architecto consequatur sed velit debitis animi eaque voluptatum mollitia, iusto quisquam? Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum ad consequuntur, deleniti cum id cumque commodi optio nisi labore pariatur placeat error nam, tenetur omnis porro eum possimus, harum ullam? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio, est! Dicta harum recusandae dolorem ad excepturi exercitationem? Eligendi reprehenderit molestiae excepturi iste quaerat exercitationem consequuntur neque facere, id atque alias. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa at voluptas blanditiis molestiae sequi labore velit sed quod modi eaque, dolorem corrupti reprehenderit rerum excepturi fugit ab eius placeat et.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat fugiat cumque eum quae officia ut distinctio veniam asperiores. Dicta itaque incidunt perspiciatis harum exercitationem iure tempore at deserunt, ipsa rerum. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur sequi tenetur accusantium nihil est, nostrum pariatur sunt? Aut placeat, architecto consequatur sed velit debitis animi eaque voluptatum mollitia, iusto quisquam? Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum ad consequuntur, deleniti cum id cumque commodi optio nisi labore pariatur placeat error nam, tenetur omnis porro eum possimus, harum ullam? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio, est! Dicta harum recusandae dolorem ad excepturi exercitationem? Eligendi reprehenderit molestiae excepturi iste quaerat exercitationem consequuntur neque facere, id atque alias. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa at voluptas blanditiis molestiae sequi labore velit sed quod modi eaque, dolorem corrupti reprehenderit rerum excepturi fugit ab eius placeat et.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat fugiat cumque eum quae officia ut distinctio veniam asperiores. Dicta itaque incidunt perspiciatis harum exercitationem iure tempore at deserunt, ipsa rerum. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur sequi tenetur accusantium nihil est, nostrum pariatur sunt? Aut placeat, architecto consequatur sed velit debitis animi eaque voluptatum mollitia, iusto quisquam? Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum ad consequuntur, deleniti cum id cumque commodi optio nisi labore pariatur placeat error nam, tenetur omnis porro eum possimus, harum ullam? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio, est! Dicta harum recusandae dolorem ad excepturi exercitationem? Eligendi reprehenderit molestiae excepturi iste quaerat exercitationem consequuntur neque facere, id atque alias. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa at voluptas blanditiis molestiae sequi labore velit sed quod modi eaque, dolorem corrupti reprehenderit rerum excepturi fugit ab eius placeat et.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat fugiat cumque eum quae officia ut distinctio veniam asperiores. Dicta itaque incidunt perspiciatis harum exercitationem iure tempore at deserunt, ipsa rerum. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur sequi tenetur accusantium nihil est, nostrum pariatur sunt? Aut placeat, architecto consequatur sed velit debitis animi eaque voluptatum mollitia, iusto quisquam? Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum ad consequuntur, deleniti cum id cumque commodi optio nisi labore pariatur placeat error nam, tenetur omnis porro eum possimus, harum ullam? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio, est! Dicta harum recusandae dolorem ad excepturi exercitationem? Eligendi reprehenderit molestiae excepturi iste quaerat exercitationem consequuntur neque facere, id atque alias. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa at voluptas blanditiis molestiae sequi labore velit sed quod modi eaque, dolorem corrupti reprehenderit rerum excepturi fugit ab eius placeat et.</p>
 </body>
 </html>

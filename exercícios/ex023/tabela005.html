@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício de tabelas</title>
+    <style>
+        table{
+            width: 500px;
+            border-collapse: collapse;
+        }
+        td,th{
+            border:1px solid black;
+        }
+        .linhadestaque > th,.linhadestaque > td{
+            background-color: gray;
+            color: white;
+            font-weight: bold;
+        }
+        col.cnome{
+            background-color: greenyellow;
+        }
+    </style>
+</head>
+<body>
+<!--
+Como definir um estilo pra uma coluna inteira?
+basta dentro da tabela, antes de tudo criar uma tag colgroup, e dentro dessa tag criar uma tag para cada coluna e dar uma classe pra essa tag, da maneira que foi exemplificado abaixo, pronto, o que for definido para essa classe se aplicará para toda a coluna, lembrando, cada col não tem fechamento
+se em uma tag col, eu coloco um parâmetro span="número de colunas" então as configurações que eu definir para essa coluna valerão para a próxima(ou próximas, dependendo do número que eu colocar como valor no span) coluna também, no caso eu devo apagar o col da(s) próxima(s) coluna(s), já que o dessa já vai abranger o da(s) próxima(s) também
+-->
+    <h1>Exercício de tabela</h1>
+    <table>
+        <colgroup>
+            <col class="cnome">
+            <col class="csexo">
+            <col class="cidade">
+            <col class="cprof">
+        </colgroup>
+        <caption>Cadastro</caption>
+        <tr>
+            <th scope="col">Nome</th>
+            <th scope="col">Sexo</th>
+            <th scope="col">Idade</th>
+            <th scope="col">Profissão</th>
+        </tr>
+        <tr>
+            <td>Ana Maria</td>
+            <td>F</td>
+            <td>25</td>
+            <td>Jornalista</td>
+        </tr>
+        <tr>
+            <td>João</td>
+            <td>M</td>
+            <td>20</td>
+            <td>Vendedor</td>
+        </tr>
+        <tr>
+            <td>Mário</td>
+            <td>M</td>
+            <td>30</td>
+            <td>Açougueiro</td>
+        </tr>
+
+        <tr>
+            <td>Cláudia</td>
+            <td>F</td>
+            <td>28</td>
+            <td>Nutricionista</td>
+        </tr>
+        <tr>
+            <td>Roberto</td>
+            <td>M</td>
+            <td>25</td>
+            <td>Jornalista</td>
+        </tr>
+        <tr>
+            <td>Maria</td>
+            <td>F</td>
+            <td>25</td>
+            <td>Professora</td>
+        </tr>
+    </table>
+</body>
+</html>
