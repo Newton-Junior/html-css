@@ -21,6 +21,9 @@
             background-color: gray;
             color:white;
         }
+        tbody > tr:nth-child(2n){
+            background-color: lightgray;
+        }
         .num{
             text-align:right;
         }
@@ -62,7 +65,23 @@ no escopo relacionamos tags. A tag de título é relacionadas a todas as que vem
 
 Esses parâmetros de escopo não alteram nada na parte visual do site, porém são importantes para a análise quando o site é buscado pelo google. Isso altera na parte por trás do que é visto no site, altera em uma análise na estrutura da tabela, em como um mecanismo de busca analisa o site, torna mais fácil a análise
 
-pra mudar a largura de toda uma coluna, basta ir no título e alterar o width pelo estilo, isso vai alterar o width de toda essa coluna
+pra mudar a largura de toda uma coluna, basta ir no título e alterar o width pelo estilo, isso vai alterar o width de toda essa coluna.
+
+os valores semânticos são importante para que o google e mecanismos de buscas analisem a tabela de forma coerente.
+
+Se a largura total da table for definida as larguras de cada coluna ficam iguais. Com essa largura da table definida, se inserimos a largura de uma coluna, as outras são reorganizadas, de uma maneira que a largura total da table seja mantida
+
+pra criar efeito zebrado:
+"tag com irmãos":nth-child(2n){background-color:lightgray}
+o 2n diz que a cada 1 em cada 2 irmãos terá a configuração definida
+
+no caso abaixo teremos que dizer que são somente os tr que estiverem dentro do tbody
+
+no lugar de 2n poderia ser odd(que significa impar em ingles), ou então even(que é par em inglês)
+
+a situação ideal pra usar efeito zebrado é quando temos muitas colunas, aí fica difícil ver de qual linha veio aquele dado
+
+cabeçalho fixo em tabela grande: não funciona em todos os navegadores, mas funciona no chrome
 -->
     <table>
         <caption>População das unidades federativas
