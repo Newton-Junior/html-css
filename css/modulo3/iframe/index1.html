@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estudo sobre iframe</title>
+</head>
+<body>
+<!--
+iframe: o i vem de inline, que é como o display dessa tag se comporta. o frame vem de quadro, pois é um quadro que é puxado de outro endereço de site
+parametros do iframe:frameborder:é a bordinha do iframe; src:onde vai o link. Se colocar um link de um site, dentro do iframe vai aparecer o site em si. Existem sites que possuem uma proteção para que não aparecam dentro de iframes
+não pode usar iframe pra tudo, mas não podemos também descartar seu uso, já que pode ser útil em algumas situações, lembrando que ele pode possuir restrições de segurança
+Existem dispositivos que não tem compatibilidade com iframe. O que colocar dentro da tag frame vai aparecer caso o dispositivo não tenha compatibilidade, dentro pode colocar um link pro site que apareceria no iframe, ou um texto ou o que quiser
+
+o tamanho padrão de um iframe é de 300px por 150px
+Mas podemos alterar o parâmetro height e width, não precisa nem ir pros estilos, basta usar o parâmetro mesmo
+Parâmetro do iframe:scrolling: com os valores:auto:se o conteúdo exceder o tamanho a barra de rolagem é criada;yes:sempre exibe a barra de rolagem;no:não permite rolar(mas na verdade acaba não funcionando esse "no", porque tem navegador que permite rolar do mesmo jeito);
+parâmetro frameborder: aceita 0 ou 1, ou exibe ou não uma borda, simplesmente isso.
+além do frameborder, ainda é possível criar uma borda normal como já sei criar
+
+se o arquivo html do site que vamos exibir no iframe estiver ma mesma pasta da página exibida, então não precisa colocar link, basta colocar no src o nome do arquivo, exemplo: src:"teste.html";
+
+é possível ainda colocar uma tabela no iframe, é bom porque tem os estilos separados e tal. Mas usar a tabela direto na página dentro de div também é bom
+-->
+    <p>Acessando o site do
+
+        <iframe src="https://newton-junior.github.io/site/"> Se</iframe>
+
+        para aprender a programar
+    </p>
+
+
+</body>
+</html>
