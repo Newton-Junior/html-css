@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        iframe{
+            width:95vw;
+            height:400px;
+            border:2px solid black
+        }
+    </style>
+</head>
+<body>
+<!--
+Existe ainda a possibilidade de criar um iframe sem nada no src, aí damos um nome ao iframe com o parâmetro nome, aí, em um link colocamos como target o nome dado ao iframe, dessa maneira, quando for clicado no link, o conteúdo do link vai ser puxado pra dentro do iframe
+-->
+    <h1>Faça uma escolha</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas maiores, repudiandae debitis illum, delectus unde et voluptate quae cumque sequi enim possimus voluptatibus error dolore obcaecati dolor sapiente dolorem reiciendis! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias, similique corporis earum aperiam voluptas sint aut accusantium quia porro ipsum. Vitae voluptas est, eos tempora quas ipsum repellendus minus aut!</p>
+    <ul>
+        <li><a href="https://newton-junior.github.io/site/" target="quadro">Primeira página</a></li>
+        <li><a href="#">Segunda página</a></li>
+        <li><a href="#">Terceira página</a></li>
+    </ul>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas maiores, repudiandae debitis illum, delectus unde et voluptate quae cumque sequi enim possimus voluptatibus error dolore obcaecati dolor sapiente dolorem reiciendis! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias, similique corporis earum aperiam voluptas sint aut accusantium quia porro ipsum. Vitae voluptas est, eos tempora quas ipsum repellendus minus aut!</p>
+    <iframe name="quadro" srcdoc="<h1> Esse é um título inserido dentro do iframe através do parâmetro srcdoc</h1>">Seu navegador não é compatível com este recurso</iframe>
+</body>
+</html>

@@ -22,6 +22,24 @@ além do frameborder, ainda é possível criar uma borda normal como já sei cri
 se o arquivo html do site que vamos exibir no iframe estiver ma mesma pasta da página exibida, então não precisa colocar link, basta colocar no src o nome do arquivo, exemplo: src:"teste.html";
 
 é possível ainda colocar uma tabela no iframe, é bom porque tem os estilos separados e tal. Mas usar a tabela direto na página dentro de div também é bom
+
+Existe ainda a possibilidade de criar um iframe sem nada no src, aí damos um nome ao iframe com o parâmetro nome, aí, em um link colocamos como target o nome dado ao iframe, dessa maneira, quando for clicado no link, o conteúdo do link vai ser puxado pra dentro do iframe
+
+Existe um parâmetro pra iframe que é o srcdoc="", dentro desse parâmetro pode inserir tags de código html, por exemplo, colocar tags h1, p, img, etc, lembrando que em uma tag img por exemplo, onde temos um src que tem um valor com aspas, as aspas tem que ser aspas simples, pra diferenciar as aspas do srcdoc.
+
+frame é diferente de iframe, frame tem sido meio evitado, então é bom evitar, mas não é errado usar
+
+agora falando sobre iframe: problemas com relação a mecanismos de busca. O google por exemplo tem uma espécie de robozinho que vai vasculhando os sites e encontrando sites. Então o robô, define a relevância do site, baseado em algorítmos de indexação do google, e de acordo com essas variáveis, os sites são organizados na tela de quem pesquisa
+
+O google bot analisa os sites, seus conteúdos e define se esse site merece estar mais em cima ou mais embaixo no tela de resultados
+
+segundo o próprio google, existem problemas para indexação de iframes, então há problema pra analisar uma página que tem iframe.
+
+Então pode ser que o site seja prejudicado quando possuir iframes. Porém não é proibido o uso, mas o uso deve ser somente se necessário, deve ser um uso bem moderado e se for muito relevante para o site, lembrando que para sites que tem o objetivo de ficar lá em cima na tela de resultados de uma pesquisa do google, não é muito interessante ter iframes
+
+iframes também apresentam problemas com relação a usabilidade e acessibilidade(pessoas com necessidades especiais). Leitores de tela são para pessoas cegas, e os leitores de telas tem dificuldades para acessar iframes. Os problemas de usabilidade são aqueles que existem porque o navegador ou o usuário acabam se confundindo, por exemplo, abrimos um site pelo iframe, aí navegamos pelo site e entramos em uma página, mas queremos voltar a página anterior, pelo iframe, se clicamos no botão voltar página do navegador o navegador pode se confundir se é pra voltar uma página no iframe ou na página em que o iframe está o iframe também pode causar problemas se tem algum link dentro dele que tem o target _blank, aí o navegador não entende se é pra abrir essa página dentro do iframe ou em uma nova guia, ou seja, causa problemas nessa parte de links com target _blank. O iframe pode também ter problemas com responsividade, se o site não for responsivo, vai aparecer todo quebrado dentro do iframe. Problemas com questão de segurança: O iframe muitas vezes abre porta pra outro site(a não ser que estejamos exibindo um site que seja nosso), e não sabemos se esse site é seguro ou não, por exemplo, se exibirmos um site que está infectado com alguma tecnologia pra capturar informações de usuário, o meu site vai começar a fazer isso com as pessoas que o acessarem, não escolher bem o site que vai ser colocado dentro do iframe pode causar  problemas com invasão, ataques, como por exemplo o que é conhecido como crosssite e ataque xss. Todos os problemas que o iframe causar, seja de segurança, usabilidade ou acessibilidade são de responsabilidade do desenvolvedor do site que contenha a tag iframe.
+
+Podemos usar iframes, em alguns momentos iframes são essenciais. Mas temos que tomar vários cuidados.
 -->
     <p>Acessando o site do
 
