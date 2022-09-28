@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iframe</title>
+</head>
+<body>
+<!--
+Para bloquear ações potencialmente maliciosas dos sites que colocamos dentro dos iframes: Usar configuração dentro do iframe que se chama sandbox="", e o valor que deve ser colocado dentro é "sandbox". Quando eu coloco isso no iframe, ele bloqueia todo e qualquer acesso que o site que estiver dentro do iframe tente fazer. Inclusive torna impossível um envio de dados dentro do iframe, por exemplo, não tem como enviar os dados do formulário. Com esse parâmetro não são permitidas capturas de informações pelo iframe. Outro parâmetro que torna o iframe mais seguro é o referrerpolicy="", que é a política de referência, o valor padrão é "no-referrer-when-downgrade", esse é o valor automático, que não precisaria nem colocar. Pra tornar o iframe mais limitado, colocar o valor "no-referrer".
+Os sites capturam nossas informações pra nos mostrar propagandas. Quando deixamos essa configuração de "no-referrer", estamos bloqueando essa coleta de informações do usuário,tornando o iframe mais seguro. Voltando ao parâmetro sandbox, quando deixamos com o valor sandbox, é como se ligasse as configurações de segurança do iframe no máximo. Mas vamos supor a situação em que queremos que o formulário dentro de um iframe seja enviado: aí não podemos deixar sandbox como valor, teríamos que mudar as permissões, se colocarmos o valor: "allow-same-origin", estamos permitindo que informações sejam trocadas desde que o arquivo para onde serão enviadas as informações sejam de mesma origem do site. Lembrando que é possível inserir mais de um valor no mesmo sandbox, basta separar os dois valores por espaço. Um outro valor possível para o parâmetro é o "allow-forms", e lembrar que o html5 executa scripts quando executa formulários, precisa também colocar o valor "allow-scripts", pra ser possível o envio correto de formulários. Mesmo se premitirmos esse conjunto de ações do iframe, mesmo assim, estará bloqueando várias trocas de dados, então ainda vai ter segurança
+
+Lembrando que é arriscado deixar outro site executar scripts, a menos que eu mesmo que criei os scripts que serão executados
+-->
+    <h1>Meu site principal</h1>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptate quibusdam, incidunt animi vero laborum facilis repudiandae temporibus, architecto earum, molestiae perspiciatis magni illum exercitationem eos. Modi debitis quod eligendi quo.</p>
+    <iframe src="pag004.html" frameborder="1" sandbox="sandbox" referrerpolicy="no-referrer-when-downgrade">Seu navegador não é compatível com esse recurso</iframe>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo aut facilis obcaecati odit voluptatibus quam sed officiis, eos accusantium id quas quisquam aliquid adipisci ipsa exercitationem in laudantium cupiditate eaque!</p>
+</body>
+</html>
