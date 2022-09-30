@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+</head>
+<body>
+<!--
+o minlength é pra quantidade de caracteres, não deve ser confundido com o somente min, que é o parâmetro pra um valor numérico mínimo.
+
+Quando o input é numer, os valores por padrões só são aceitos valores inteiros, valores quebrados não são aceitos, pra mudar isso usar o parâmetro step="", que é de quanto em quanto uma nota vai mudando, se eu quiser que seja de 0.5 em 0.5, é só definir como valor step="0.5" aí aceita 6.5, e valores desse tipo, mas não aceitaria 6.1.
+
+nem todo atributo funciona em todos os controles, tenho que ir testando, ver o que funciona ou não
+
+se em um input do tipo number eu coloco um atributo value="", o valor que eu colocar no value já vai aparecer preenchido
+
+pra colocar em value em um input month é nesse modelo:"2020-07", já um formato de data completa, se o input for de outro tipo é no modelo:"2020-07-30"
+
+os navegadores tem validadores de data, exemplo, se colocar um dia que não existe o chrome não aceita. exemplo:30/02/2022
+-->
+    <h1>Teste de formulário</h1>
+    <form action="cadastro.php" method="get" autocomplete="on">
+        <p>
+            <label for="inome">Nome: </label>
+            <input type="text" nome="nome" id="inome" required maxlength="30" placeholder="Nome completo" autocomplete="name">
+        </p>
+        <p>
+            <label for="imedia">Média</label><input type="number" name="media" id="imedia" min="0" max="10" step="0.1" value="5">
+        </p>
+        <p>
+            <label for="imes">Período letivo</label><input type="month" name="mes" id="imes" value="2020-07">
+        </p>
+        <p>
+            <label for="idia">Dia da prova</label><input type="date" name="dia" id="idia">
+        </p>
+        <label for="ihora">Horário da prova</label><input type="time" name="hora" id="ihora">
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </p>
+    </form>
+</body>
+</html>
