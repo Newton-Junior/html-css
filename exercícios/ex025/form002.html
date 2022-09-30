@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<!--
+Dentro do form colocamos os conteúdos em divs, mas nesses exemplos de estudo estou usando p mesmo
+
+password não permite as pessoas verem o que está sendo escrito
+
+se colocar o parâmetro required dentro de um input torna esse input obrigatório, lembrando que esse parâmetro não necessita de valor
+
+quando estiver com o required ativo, se não digitar o valor aparece um balãozinho falando que é obrigatório o valor, essa ação de aparecer o balãozinho é javascript que é rodado automáticamente pelo navegador. Várias ações que não sabemos possuem javascript, porisso lembrar quando for aplicar alguma ação de segurança pra impedir scripts
+
+É possível ainda determinar o máximo ou o mínimo de caracteres que o input deve ter, com os parâmetros: minlength=""; e o parâmetro maxlength="". Quando esses requisitos(que são checados usando javascript pelo navegador) de tamanho minimo e máximo não forem satisfeitos, o navegador também gerará uma mensagem.
+
+Quando vamos criar um banco de dados temos que limitar a quantidade de caracteres que os usuários irão inserir
+
+Tem o parâmetro size que define o tamanho do local de inserção de dados, se coloca 10 como valor do size, estou dizendo que o tamanho é o tamanho de 10 caracteres, mas acaba errando as contas porque letras tem tamanhos diferentes
+
+placeholder é um parâmetro de input que existe pra colocar informações pro usuário. É aquelas letras mais fraquinhas em cinza que aparecem antes de digitarmos algo, informando o que digitar no campo em questão, e esse placeholder desaparece assim que clicamos pra digitar algo
+
+É bom deixar o autocomplete ligado(as sugestões de nome ou usuário)
+Como informar do que se refere aquele input pro autocomplete funcionar corretamente? Primeiro deixar o autocomplete ligado no form com autocomplete="on", e em cada caixa precisamos informar do que se refere a caixa. Quando colocamos o parâmetro autocomplete no form temos somente a opção de on e off, mas quando colocamos o autocomplete em um input dentro do form temos que informar do que aquele input se refere, aí no caso temos muitas opções. Por exemplo: username é pra usuário. Pra senha temos o new password que é pra digitar uma nova senha e temos o current password que estamos dizendo que é a senha que já usamos, isso inclusive ajuda o navegador a relacionar usuário com senha e alterar dados nos gerenciadores de senha dos usuários que é onde temos nossas senhas salvas pelo google
+-->
+    <h1>Teste de Formulário</h1>
+    <form action="cadastro.php" method="post" autocomplete="on">
+        <p>
+            <label for="iusu">Usuário: </label><input type="text" name="usu" id="iusu" required minlength="5" maxlength="10" size="50" placeholder="Nome do usuário" autocomplete="username">
+        </p>
+        <p>
+            <label for="isen">Senha: </label> <input type="password" name="sen" id="isen" required minlength="5" maxlength="10">
+        </p>
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </p>
+    </form>
+</body>
+</html>

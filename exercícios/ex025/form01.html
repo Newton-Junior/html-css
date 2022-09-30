@@ -17,14 +17,36 @@ input type="submit" é pra enviar informações. o parâmetro value é o texto q
 
 Precisa fazer uma ligação entre o texto que vem antes do input e o input.
 
-Tem como desligar as sugestões de nome que aparecem abaixo da caixa de texto
-
 O navegador precisa reconhecer a ligação entre o texto que vem antes de um input e o input
+
+Tem como desligar as sugestões de nome que aparecem abaixo da caixa de texto: com o parâmetro do form autocomplete="off"
+
+Os dados são enviados pra alguma linguagem de programação, asp, java, php
+
+o parâmetro action vai no form e é disparado quando eu aperto em submit
+
+os parâmetros name dos inputs servem pra linguagem php e html. Já no javascript é usado mais o id
+
+o label tem o parâmetro for, que liga o label a algum input, aí nesse for coloca o id. Pra ficar mais organizado coloca um i na frente do valor do id
+
+Sempre em formulários os labels tem que estar relacionados a inputs
+
+quando tá ineterligado, se clicar no label já seleciona a caixa, isso é util porque aumenta a área onde se pode clicar pra preencher. No computador não faz muita diferença, já no celular as vezes é difícil acertar um ponto muito pequeno, o label ajuda nisso também
+
+Existem dois métodos pra envio de dados: get e post. O get é o valor padrão: nele os dados digitados no formulário apaarecem no navegador. No método post é o contrário, não aparecem na url, porém esses dados ainda estão disponívels, só não estão aparecendo na url, mas se apertamos em inspecionar>Network> clicar no arquivo php pro qual foram enviados os dados>Headers:os dados estão disponíveis. Pra realmente proteger os dados, é preciso criptografar os dados, e pra isso eu precisaria trabalhar com https, que é um protocolo de transmissão de dados, no momento estou utilizando o http.
+
+Quando usar get ou post: usar get quando os dados não forem dados sensíveis, quando por exemplo ta pedindo nome, peso, o que ele procura, essas coisas, e não senhas número de cartão de crédito, endereço, CEP. Quando estamos fazendo uma busca no google estamos usando o método get
+
+Um formulário get é compartilhável, por exemplo, quando fazemos uma pesquisa no google, podemos compartilhar a tela de resultados com alguém, ou seja, a url do formulário preenchido é compartilhável
+
+Outra informação: usar o método get somente quando as informações inseridas no formulário não ultrapassarem 3000 bytes, o que equivale a aproximadamente 3000 letras
+
+Usar o post quando usar campos sensíveis, como senha, número de cartão de crédito, endereço(mas se tratando de numero de cartão de crédito ou endereço é melhor trabalhar com https), ou quando houver envio de fotos, ou outros tipos de arquivos, também usar o post quando os dados enviados passarem de 3000 bytes
 -->
     <h1>Meu primeiro formulário</h1>
-    <form>
-        <p>Nome <input type="text" name="nome" id="nome">
-        <p>Sobrenome <input type="text" name="sobrenome" id="sobrenome"></p>
+    <form autocomplete="off" action="cadastro.php" method="post">
+        <p><label for="inome">Nome</label> <input type="text" name="nome" id="inome">
+        <p><label for="isobrenome">Sobrenome</label> <input type="text" name="sobrenome" id="isobrenome"></p>
         <p><input type="submit" value="Enviar"></p>
     </form>
 </body>
