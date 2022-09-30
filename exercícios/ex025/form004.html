@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<!--
+O input type="tel" traz boas possibilidades quando aberto em telefone, pois consegue dar acesso a lista de contatos
+
+Existe algo que se chama expressões regulares(ou RegEx) que define o padrão no qual os números de um telefone por exemplo devem ser digitados. A expressão regular é configurada pelo atributo pattern="!$", aí dentro desses caracteres deve ter por exemplo ^\d{4}-\d{4}. Isso quer dizer: 4 digitos de numeros traço 4 digitos de numeros. Aí se o que for digitado não corresponder ao que é exigido, o navegador não permite o action. Em se tratando de pattern pra abrir parênteses é \( e aí pra fechar é \)
+
+Dá pra fazer uma expressão regular pra definir o padrão do e-mail também, mas nenhum desse patterns(tanto pra celular quanto pra e-mail) é suficiente pra conseguir deixar passar ou bloquear um dado errado. Vou estudar melhor uma validação em javascript ou php mais pra frente
+
+fieldset é uma tag pra agrupamento de tags, normalmente usado pra agrupar dados parecidos.
+Também tem a tag legend, que cria uma legenda pra algo, dá um estilo muito legal se estiver dentro de um fieldset
+-->
+    <h1>Exemplo de formulário</h1>
+    <form action="cadastro.php" method="get" autocomplete="on">
+        <fieldset>
+            <legend>Dados pessoais</legend>
+            <p>
+                <label for="inome">Nome</label>
+                <input type="text" name="nome" id="inome" minlength="5" maxlength="20" required>
+            </p>
+            <p>
+                <label for="iemail">E-mail: </label><input type="email" name="email" id="iemail" required autocomplete="email">
+            </p>
+            <label for="itel">Telefone: </label><input type="tel" name="tel" id="itel" autocomplete="tel" pattern="^\(\d{2}\)\d{4}-\d{4}$">
+            <p>
+        </fieldset>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </p>
+    </form>
+</body>
+</html>
