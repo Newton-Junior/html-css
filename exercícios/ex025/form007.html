@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+</head>
+<body>
+<!--
+A ´primeira diferença da tag select pra tag input é que a tag select tem fechamento e a input não
+
+select é aquele botão que quando apertamos desce uma barrinha com vários valores
+Modelo de um elemento select: você abre o select, aí dentro dele coloca tags option, cada option é uma opção
+
+os options vão aparecendo na ordem que eu insiro eles dentro do select
+
+Eu tenho a opção de agrupar opções dentro de um select. Para isso eu deixo as options que eu quiser dentro de uma tag <optgroup><optgroup>, aí nesse opt group eu coloco um atributo label="" e como valor desse atributo eu devo colocar o nome que eu quero que apareça como título do optgroup. Não confundir o atributo label com a tag label. Os títulos dos opt group não são clicáveis
+
+Se em algum option eu coloco o atributo selected, esse valor já vem selecionado, esse atributo não tem valor
+
+Uma boa opção é criar um option primeiro de todos, deixar o value vazio, colocar o atributo selected, e escrever dentro dessa tag: Escolha. Pronto, é isso que vai aparecer dentro da caixa antees de tudo
+
+Uma outra opção pra se selecionar uma opção é um datalist
+Um datalist atua sobre um input do tipo text comum. O datalist são as informações que aparecem quando clicamos sobre um input text.
+Funciona assim:Primeiro faço o meu input tipo text normal, depois abaixo crio uma tag <datalist></datalist>, dentro desse datalist eu crio vários options, cada option será um avlor que vai aparecer dentro do input text. Agora eu devo dar um id pra datalist, e esse id eu coloco como valor em um atributo list na tag do input text na qual eu quero que apareça o datalist. Dentro dos options do datalis eu coloquei um value, e na hora que estou abrindo o site esse value é o que aparece, se eu tirar o value o que aparece é o que está dentro da tag de option, então vou tirar o value
+
+segundo a w3c funcionaria colocar optgroup dentro de datalist para organização, mas na prática ainda não funciona
+
+Com o elemento select os elementos são definidos pelo desenvolvedor, e o cliente não pode criar um valor pra ele. Já no input text com datalist o cliente poe colocar o valor que ele quiser, inclusive valores que não aparecem no datalist
+
+Quando o visitante coloca um valor diferente em um input text com datalist, o navegador salva esse valor e na próxima vez que o visitante clicar no mesmo input, o valor que o visitante tinha digitado da última vez vai aparecer junto com os valores que já tinham no datalist
+
+a tag text area é um local pra digitar texto mas é um campo que possui uma altura e largura definidas, os atributos são: name, id, cols="" que é o numero de colunas vão aparecer na tela;rows="" que é quantas linhas vão aparecer na tela
+
+Ao usar textarea o ideal é que o formulário esteja com o método post.
+
+Lembrando que um formulário com o método get tem um limite de 3000 bytes pra enviar valores
+-->
+    <form action="cadastro.php" method="get" autocomplete="on">
+        <p>
+            <label for="iest">Estado: </label>
+            <select name="est" id="iest">
+                <option value="" selected>Clique aqui para selecionar um estado</option>
+                <optgroup label="Região Sudeste">
+                    <option value="SP">São Paulo</option>
+                    <option value="MG">Minas Gerais</option>
+                    <option value="RJ">Rio de Janeiro</option>
+                </optgroup>
+
+                <optgroup label="Região Nordeste">
+                    <option value="MA">Maranhão</option>
+                    <option value="PE">Pernambuco</option>
+                    <option value="RN">Rio Grande do Norte</option>
+                </optgroup>
+            </select>
+        </p>
+        <p>
+            <label for="iprof">Profissão: </label>
+            <input type="text" name="prof" id="iprof" list="istprof">
+            <datalist id="istprof">
+                <option>Administrador</option>
+                <option>Contabilista   </option>
+                <option>Desenvolvedor</option>
+                <option>Professor</option>
+            </datalist>
+        </p>
+        <p>
+            <label for="imsg">Mensagem: </label><br>
+            <textarea name="" id="" cols="30" rows="10"></textarea>
+        </p>
+        <input type="submit" value="Enviar">
+        <input type="reset" value="Limpar">
+    </form>
+</body>
+</html>
