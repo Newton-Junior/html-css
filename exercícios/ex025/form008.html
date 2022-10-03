@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo de formulário</title>
+</head>
+<body>
+<!--
+Sobre a tag output. O output é um valor que o cliente não pode alterar diretamente. Mas é possível mostrar o resultado de uma soma em um output. Como fazer somar dois valores?
+Primeiro: crie o input e dê um id pra ele. Temos que ter dois inputs antes do tipo number, aí nesses inputs, colocar o atributo: oninput="", aí dentro desse...
+*
+observação: innerHTML significa o que está dentro desse html em questão
+*
+...oninput, colocar oninput="isoma.innerHTML=Numer(in1.value)+Number(in2.value)"
+
+Isso é acionado quando eu insiro um dado no input, tanto que chama oninput
+
+Lembrando que quando apertamos em enviar o output não é enviado, mas os input são enviados. Conclusão: o output não é pra enviar nada, mas só pra calcular e mostrar coisas na tela
+-->
+    <form action="cadastro.php" method="get" autocomplete="on">
+        <p>
+            <label for="in1">Número 1: </label>
+            <input type="number" name="n1" id="in1" min="0" max="50" required oninput="isoma.innerHTML=Number(in1.value)+Number(in2.value)"
+        </p>
+        <p>
+            <label for="in2">Número 2: </label>
+            <input type="number" name="n2" id="in2" min="0" max="50" required oninput="isoma.innerHTML=Number(in1.value)+Number(in2.value)">
+        </p>
+        <p>
+            <label for="isoma">Soma: </label>
+            <output name="soma" id="isoma">0</output>
+        </p>
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </p>
+    </form>
+</body>
+</html>

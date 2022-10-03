@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="cadastro.php" method="get" autocomplete="on">
+        <p>
+            <label for="inum">Qual valor de valor você quer pagar no seu curso?</label>
+            <input type="range" name="val" id="ival" min="50" max="500" value="275" oninput="ival2.innerHTML = Number(ival.value)">
+            <output id="ival2">275</output>
+        </p>
+
+    </form>
+</body>
+</html>
