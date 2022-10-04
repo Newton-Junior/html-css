@@ -1,0 +1,9 @@
+Mobile first:
+O algoritmo do google valoriza sites feitos em mobile first
+que é a técnica de desenvolver o site inicialmente para celular, e depois adaptado para pcs, notebooks, etc
+
+Tem gente que só tem dispositivo móvel, e dessa maneira, depende desses dispositivos. Muita gente só acessa site pelo celular, portanto é uma ótima decisão dar um foco maior para os dispositivos móveis
+
+Deve-se levar em conta que o site não pode ser pesado, tem que ser bem adequado a dispositivos móveis, pra ficar mais acessível, mais fácil de acessar de celular
+
+Um site que funciona muito bem em dispositivos móveis dá uma credibilidade muito grande, passa a impressão de que estamos lidando com algo muito profissional
