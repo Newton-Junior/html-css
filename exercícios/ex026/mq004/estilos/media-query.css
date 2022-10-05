@@ -1,5 +1,75 @@
 @charset "UTF-8";
 /*Todas as demais mídias*/
+
+/*
+Typical device breakpoints, pontos do valor largura onde há alteração no layout da página, para se adequar aos mais diversos dispositivos. É possível encontrar esses tipical device brakpoints na própria W3C.
+
+Aquis estão os Typical device brakpoints:
+Pequenas telas: até 600px;
+Celular:de 600px até 768px;
+Tablet:768px até 992px;
+Desktop:992px até 1200px;
+Grandes telas:Acima de 1200px;
+
+Falando sobre esse projeto, eu já fiz a configuração css principal pra celular, a configuração principal eu coloquei em um arquivo css linkado com o html em uma tag link com o atributo media type com o valor "all". Segui o método mobile first.
+Já que pra celular já está configurado automaticamente, é ncessário fazer as configurações para outros tamanhos de tela
+
+Em impressora não aparece o background
+*/
 @media print{
-    
+    *{
+        font-family: 'Courier New', Courier, monospace;
+    }
+    body{
+        background-image: url(../imagens/back-print.jpg);
+    }
+    main{
+        border: 2px solid black;
+    }
+    main::after{
+        content:'Essa impressão foi feita através do site www.cursoemvideo.com';
+        text-decoration: overline;
+    }
+    main h1{
+        text-shadow: none;
+        color:black;
+    }
+    img#phone{display: none;}
+    img#tablet{display: none;}
+    img#print{display: block;}
+    img#pc{display: none;}
+    img#tv{display: none;}
+}
+@media only screen and (min-width: 768px) and (max-width: 992px){/*TABLET*/
+    body{
+        background-image: url(../imagens/back-tablet.jpg);
+    }
+    img#phone{display: none;}
+    img#tablet{display: block;}
+    img#print{display: none;}
+    img#pc{display: none;}
+    img#tv{display: none;}
+}
+@media only screen and (min-width:992px) and (max-width:1200px){/*DESKTOP*/
+    body{
+        background-image: url(../imagens/back-pc.jpg);
+    }
+    img#phone{display: none;}
+    img#tablet{display: none;}
+    img#print{display: none;}
+    img#pc{display: block;}
+    img#tv{display: none;}
+}
+@media only screen and (min-width:1200px){/*GARNDES TELAS*/
+    body{
+        background-image: url(../imagens/back-tv.jpg);
+    }
+    main{
+        width: 700px;
+    }
+    img#phone{display: none;}
+    img#tablet{display: none;}
+    img#print{display: none;}
+    img#pc{display: none;}
+    img#tv{display: block;}
 }
